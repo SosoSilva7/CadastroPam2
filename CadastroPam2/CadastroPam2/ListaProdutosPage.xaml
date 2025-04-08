@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CadastroPam2"
              x:Class="CadastroPam2.ListaProdutosPage"
              Title="ListaProdutosPage">
     <VerticalStackLayout>
@@ -11,12 +12,18 @@
 
             <ListView.ItemTemplate>
 
-                <DataTemplate>
+                <DataTemplate x:DataType="local:Produto">
 
                     <ViewCell>
                         <StackLayout Padding="10">
                             <Label Text="{Binding Nome}" FontAttributes="Bold"/>
-                            <Label Text="{Binding PrecoFormatado}" TextColor="Green"/> 
+                            <Label Text="{Binding PrecoFormatado}" TextColor="Green"/>
+                            <Label Text="Descrição" FontAttributes="Bold"/>
+                            <Label Text="{Binding Descricao}"></Label>
+                            <Label Text="{Binding Validade}"/>
+                            <Label Text="Categoria" FontAttributes="Bold"/>
+                            <Label Text="{Binding Categoria}"/>
+
                         </StackLayout>
                     </ViewCell>
                     <!--<TextCell Text="{Binding Nome}" Detail="{Binding PrecoFormatado}" />-->
