@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroPam2.ListaProdutosPage"
+             Title="ListaProdutosPage">
+    <VerticalStackLayout>
+        <Label Text="Lista de Produtos" FontSize="24" HorizontalOptions="Center"/>
+
+
+        <ListView x:Name="produtosListView">
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Nome}" FontAttributes="Bold"/>
+                            <Label Text="{Binding PrecoFormatado}" TextColor="Green"/> 
+                        </StackLayout>
+                    </ViewCell>
+                    <!--<TextCell Text="{Binding Nome}" Detail="{Binding PrecoFormatado}" />-->
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
