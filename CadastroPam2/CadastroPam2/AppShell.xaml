@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:CadastroPam2"
     x:Class="CadastroPam2.AppShell">
 
-    <!-- Conteúdo shell -->
+    <!-- Rotas necessárias -->
     <ShellContent
         Title="Cadastro"
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -15,5 +15,4 @@
         Title="Lista"
         ContentTemplate="{DataTemplate local:ListaProdutosPage}"
         Route="ListaProdutosPage" />
-
 </Shell>

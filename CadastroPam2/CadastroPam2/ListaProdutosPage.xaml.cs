@@ -15,4 +15,9 @@ public partial class ListaProdutosPage : ContentPage
         produtosListView.ItemsSource = null;
         produtosListView.ItemsSource = MainPage.Produtos;
     }
+
+    private async void Voltar_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//MainPage");
+    }
 }
